@@ -672,6 +672,8 @@ div#portfoliolist {
 	float: left;
 	width: 65%;
 	margin-top:3%; 
+	text-align: justify;
+	text-justify: inter-word;
 }
 .about-text p {
 	font-size: 15px;
