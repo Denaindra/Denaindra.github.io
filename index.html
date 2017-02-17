@@ -73,27 +73,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<article style="position: absolute; width: 100%; opacity: 0;">
 							<div class="banner-wrap">
 								<div class="banner_center">
-									<h1>hello world,</h1>
-									<h2>i am <span>graphic & web designer</span></h2>
-									<h2>from morocco</h2>
+									<h1>Hi there</h1>
+									<h2>i am <span>Gayan Perera</span></h2>
+									<h2>professional software designer</h2>
 								</div>
 							</div>
 						</article>
 						<article style="position: relative; width: 100%; opacity: 1;">
 							<div class="banner-wrap">
 								<div class="banner_center">
-									<h1>Content here,</h1>
-									<h2>Lorem <span>graphic &  designer</span></h2>
-									<h2>Contrary</h2>
+									<h1>All kinds of</h1>
+									<h2><span>Mobile,Web & Desktop application </span></h2>
+									<h2></h2>
 								</div>
 							</div>
 						</article>
 						<article style="position: absolute; width: 100%; opacity: 0;">
 							<div class="banner-wrap">
 								<div class="banner_center">
-									<h1>Lorem Ipsum ,</h1>
-									<h2>Contrary to <span>&  designer</span></h2>
-									<h2>reproduced below</h2>
+									<h1>Catch me in</h1>
+									<h2><span>0775447683</span>from</h2>
+									<h2>What's up, Viber</h2>
 								</div>
 							</div>
 						</article>
@@ -267,13 +267,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="portfolio-section-bottom-row" id="portfolio">
 				<div class="container">
-					<!--<ul id="filters" class="clearfix">
+					<ul id="filters" class="clearfix">
 						<li><span class="filter active" data-filter="app card icon web logo1">All</span></li>
-						<li><span class="filter" data-filter="app">Branding</span></li>
-						<li><span class="filter" data-filter="card">Print</span></li>
-						<li><span class="filter" data-filter="icon">Webdesign</span></li>
-						<li><span class="filter" data-filter="logo1">Photography</span></li>
-					</ul>-->
+						<li><span class="filter" data-filter="app">Mobile</span></li>
+						<li><span class="filter" data-filter="card">web</span></li>
+						<li><span class="filter" data-filter="icon">Desktop</span></li>
+					</ul>
 					<div id="portfoliolist">
 						<div class="portfolio card mix_all  wow bounceIn" data-wow-delay="0.4s" data-cat="card" style="display: inline-block; opacity: 1;">
 							<div class="portfolio-wrapper grid_box">
@@ -319,17 +318,56 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 							</div>
 						</div>
-						<div class="portfolio logo1 mix_all wow bounceIn" data-wow-delay="0.4s" data-cat="logos" style="display: inline-block; opacity: 1;">
-							<div class="portfolio-wrapper grid_box">
-								<a href="images/pic-8.jpg" class="swipebox" title="Image Title"> <img src="images/pic-8.jpg" class="img-responsive" alt=""><span class="zoom-icon"></span> </a>
-
-							</div>
-						</div>
-
 						<div class="clearfix"></div>
 					</div>
 				
-	
+		<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+					<script type="text/javascript">
+					$(function () {
+						
+						var filterList = {
+						
+							init: function () {
+							
+								// MixItUp plugin
+								// http://mixitup.io
+								$('#portfoliolist').mixitup({
+									targetSelector: '.portfolio',
+									filterSelector: '.filter',
+									effects: ['fade'],
+									easing: 'snap',
+									// call the hover effect
+									onMixEnd: filterList.hoverEffect()
+								});				
+							
+							},
+							
+							hoverEffect: function () {
+							
+								// Simple parallax effect
+								$('#portfoliolist .portfolio').hover(
+									function () {
+										$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+										$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+									},
+									function () {
+										$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+										$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+									}		
+								);				
+							
+							}
+				
+						};
+						
+						// Run the show!
+						filterList.init();
+						
+						
+					});	
+					</script>
+			<!-- Gallery Script Ends -->
+			
 					<div class="arrow">
 						<a href="#services" class="scroll"><img src="images/arrow.png" alt="" /></a>
 					</div>
@@ -341,25 +379,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="container">
 				<div class="services-header">
 					<h3>services</h3>
-					<p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem
-						quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate
-						cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. </p>
+					<p>All Kinds of ERP Systems, Security Systems, Billing Systems, Finacial Systems and Desktop Application</p>
 				</div>
 				<div class="services-sectiongrids">
 					<div class="col-md-4 services-grid">
 						<img src="images/img1.png" alt="" />
 						<h4>Desktop</h4>
-						<p>All kinds of ERP systems , Security systems, Billing systems, Finacial systems and Desktop pplication  </p>
+						<p> </p>
 					</div>
 					<div class="col-md-4 services-grid">
 						<img src="images/img2.png" alt="" />
 						<h4>Mobile</h4>
-						<p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
 					</div>
 					<div class="col-md-4 services-grid">
 						<img src="images/img3.png" alt="" />
 						<h4>web development</h4>
-						<p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
 					</div>
 					<div class="clearfix"></div>
 					<div class="arrow1">
