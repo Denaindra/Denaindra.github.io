@@ -541,11 +541,7 @@ ul.wmuSliderPagination {
 	overflow:hidden;
 	margin: 0px 1% 2% 0;
 }
-div#portfoliolist {
-	padding: 19px 6px 0px 19px;
-	background: url("../images/left.png") no-repeat;
-	background-size: 100% 100%;
-}	
+
 .portfolio-wrapper {
 	overflow:hidden;
 	position: relative !important;
