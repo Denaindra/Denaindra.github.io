@@ -119,27 +119,27 @@ nav ul li a:hover {
 }
 
 nav ul li:nth-child(1) {
-    background: #eb5273;
+    background:  #4A4849;
 }
 
 nav ul li:nth-child(2) {
-    background: #00b9ef;
+    background:  #4A4849;
 }
 
 nav ul li:nth-child(3) {
-    background: #fc7e46;
+    background:  #4A4849;
 }
 
 nav ul li:nth-child(4) {
-    background: #4ddba6;
+    background:   #4A4849;
 }
 
 nav ul li:nth-child(5) {
-    background: #00b9ef;
+    background:  #4A4849;
 }
 
 nav ul li:nth-child(6) {
-    background: #eb5273;
+    background:  #4A4849;
 }
 
 .navbar-default {
