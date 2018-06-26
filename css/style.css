@@ -368,30 +368,30 @@ a.wthree-.about-link {
 }
 
 .ab1 span {
-    color: #4ddba6;
+    color: #4A4849;
     font-size: 2em;
 }
 
 .main-about-grid1 {
-    border-top: 8px solid #4ddba6;
+    border-top: 8px solid #4A4849;
 }
 
 .main-about-grid2 {
-    border-top: 8px solid #fc7e46;
+    border-top: 8px solid #4A4849;
 }
 
 .main-about-grid2 span.fa,
 .main-about-grid2.ab1 h5 {
-    color: #fc7e46;
+    color: #4A4849;
 }
 
 .main-about-grid3 {
-    border-top: 8px solid #00b9ef;
+    border-top: 8px solid #4A4849;
 }
 
 .main-about-grid3 span.fa,
 .main-about-grid3.ab1 h5 {
-    color: #00b9ef;
+    color: #4A4849;
 }
 
 
@@ -413,7 +413,7 @@ h4.aboutbtm-head {
 }
 
 .ab1 h5 {
-    color: #4ddba6;
+    color: #4A4849;
     font-size: 1.4em;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -929,16 +929,16 @@ div#services {
 }
 
 .icon4 .fa:hover {
-    background: #58c56f;
+    background: #4A4849;
 }
 
 .icon5 .fa:hover {
-    background: #F44336;
+    background: #4A4849;
 }
 
 .icon6 .fa:hover,
 .bb3 {
-    background: #1fa67a;
+    background: #4A4849;
 }
 
 .icon span.fa:hover.icon3 .fa {
@@ -948,7 +948,7 @@ div#services {
 .text h4 {
     text-transform: uppercase;
     font-size: 18px;
-    color: #4CAF50;
+    color: #4A4849;
     margin: .7em 0;
 }
 
@@ -1069,7 +1069,7 @@ h3.title-contact {
 }
 
 .contact-right-w3l input[type="submit"] {
-    background: #000;
+    background: #4A4849;
     color: #FFF;
     padding: .9em 1.8em;
     margin-top: 1.3em;
@@ -1110,7 +1110,7 @@ h3.title-contact {
     font-size: 2em;
     text-transform: uppercase;
     font-weight: 600;
-    color: #1853a1;
+    color: #4A4849;
     letter-spacing: 4px;
 }
 
@@ -1236,7 +1236,7 @@ h3.title-contact {
 }
 
 .contact-left-w3ls h4 {
-    color: #49c7ed;
+    color: #4A4849;
     font-weight: 600;
     margin-top: 0.4em;
     font-size: 1.2em;
@@ -1365,7 +1365,7 @@ ul.w3-links {
 
 ul.w3-links li a i.fa {
     color: #f5f5f5;
-    background: #1853a1;
+    background: #4A4849;
     font-size: 1em;
     line-height: 2.2em;
     text-align: center;
@@ -1394,12 +1394,12 @@ ul.w3-links li a i.fa:hover {
 }
 
 .footer-main p {
-    color: #777;
+    color: #ffffff;
     letter-spacing: 1px;
 }
 
 .footer-main p a {
-    color: #ea4c89;
+    color: #4A4849;
     text-decoration: none;
     -webkit-transition: .5s all;
     -moz-transition: .5s all;
@@ -1427,7 +1427,7 @@ span.icon_dribbble {
 }
 
 span.icon_g_plus {
-    background: #dd4b39;
+    background: #4A4849;
 }
 
 .footer-social ul li a {
@@ -1462,7 +1462,7 @@ span.icon_g_plus {
 
 .footer-main h4 {
     font-size: 3em;
-    color: #ea4c89;
+    color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 300;
@@ -1560,19 +1560,19 @@ span.icon_g_plus {
 }
 
 .progress.pink .progress-bar:after {
-    border-bottom-color: #ff4b7d;
+    border-bottom-color: #ffffff;
 }
 
 .progress.green .progress-bar:after {
-    border-bottom-color: #5fad56;
+    border-bottom-color: #ffffff;
 }
 
 .progress.yellow .progress-bar:after {
-    border-bottom-color: #e8d324;
+    border-bottom-color: #ffffff;
 }
 
 .progress.blue .progress-bar:after {
-    border-bottom-color: #3485ef;
+    border-bottom-color: #ffffff;
 }
 
 @-webkit-keyframes animate-positive {
