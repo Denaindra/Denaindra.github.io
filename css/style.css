@@ -119,27 +119,27 @@ nav ul li a:hover {
 }
 
 nav ul li:nth-child(1) {
-    background:  #4A4849;
+    background:  #04182b;
 }
 
 nav ul li:nth-child(2) {
-    background:  #4A4849;
+    background:  #04182b;
 }
 
 nav ul li:nth-child(3) {
-    background:  #4A4849;
+    background:  #04182b;
 }
 
 nav ul li:nth-child(4) {
-    background:   #4A4849;
+    background:   #04182b;
 }
 
 nav ul li:nth-child(5) {
-    background:  #4A4849;
+    background:  #04182b;
 }
 
 nav ul li:nth-child(6) {
-    background:  #4A4849;
+    background:  #04182b;
 }
 
 .navbar-default {
@@ -327,7 +327,7 @@ h3.pos-title1 {
     font-size: 4em;
     text-transform: uppercase;
     margin-bottom: 0.5em;
-    color: #4A4849;
+    color: #04182b;
     text-align: center;
     font-weight: 300;
 }
@@ -340,8 +340,8 @@ ul.about-list li {
 
 a.wthree-.about-link {
     color: #fff;
-    border: 1px solid #4A4849;
-    background: #4A4849;
+    border: 1px solid #04182b;
+    background: #04182b;
     border-radius: 0;
     width: 100%;
     padding: 10px 20px;
@@ -368,30 +368,30 @@ a.wthree-.about-link {
 }
 
 .ab1 span {
-    color: #4A4849;
+    color: #04182b;
     font-size: 2em;
 }
 
 .main-about-grid1 {
-    border-top: 8px solid #4A4849;
+    border-top: 8px solid #04182b;
 }
 
 .main-about-grid2 {
-    border-top: 8px solid #4A4849;
+    border-top: 8px solid #04182b;
 }
 
 .main-about-grid2 span.fa,
 .main-about-grid2.ab1 h5 {
-    color: #4A4849;
+    color: #04182b;
 }
 
 .main-about-grid3 {
-    border-top: 8px solid #4A4849;
+    border-top: 8px solid #04182b;
 }
 
 .main-about-grid3 span.fa,
 .main-about-grid3.ab1 h5 {
-    color: #4A4849;
+    color: #04182b;
 }
 
 
@@ -413,7 +413,7 @@ h4.aboutbtm-head {
 }
 
 .ab1 h5 {
-    color: #4A4849;
+    color: #04182b;
     font-size: 1.4em;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -625,8 +625,8 @@ figcaption.port-gird-caption-agileits_w3layouts:hover {
 
 .simplefilter li.active,
 .simplefilter li:hover {
-    background: #4A4849;
-    border: 1px solid #4A4849;
+    background: #04182b;
+    border: 1px solid #04182b;
     color: #fff;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
@@ -746,7 +746,7 @@ li.blog-icon-left a {
 }
 
 .blog-bottom {
-    background: #4A4849;
+    background: #04182b;
     padding: 2em;
 }
 
@@ -881,7 +881,7 @@ div#services {
 }
 
 .serv-txt span {
-    background: #4A4849;
+    background: #04182b;
     border: none;
     color: #fff;
 }
@@ -891,7 +891,7 @@ div#services {
 }
 
 .icon1 .fa {
-    color: #4A4849;
+    color: #04182b;
 }
 
 .icon3 .fa {
@@ -920,7 +920,7 @@ div#services {
 }
 
 .icon1 .fa:hover {
-    background: #4A4849;
+    background: #04182b;
 }
 
 .icon3 .fa:hover,
@@ -929,16 +929,16 @@ div#services {
 }
 
 .icon4 .fa:hover {
-    background: #4A4849;
+    background: #04182b;
 }
 
 .icon5 .fa:hover {
-    background: #4A4849;
+    background: #04182b;
 }
 
 .icon6 .fa:hover,
 .bb3 {
-    background: #4A4849;
+    background: #04182b;
 }
 
 .icon span.fa:hover.icon3 .fa {
@@ -948,7 +948,7 @@ div#services {
 .text h4 {
     text-transform: uppercase;
     font-size: 18px;
-    color: #4A4849;
+    color: #04182b;
     margin: .7em 0;
 }
 
@@ -1069,7 +1069,7 @@ h3.title-contact {
 }
 
 .contact-right-w3l input[type="submit"] {
-    background: #4A4849;
+    background: #04182b;
     color: #FFF;
     padding: .9em 1.8em;
     margin-top: 1.3em;
@@ -1110,7 +1110,7 @@ h3.title-contact {
     font-size: 2em;
     text-transform: uppercase;
     font-weight: 600;
-    color: #4A4849;
+    color: #04182b;
     letter-spacing: 4px;
 }
 
@@ -1142,20 +1142,20 @@ h3.title-contact {
     color: #000;
     outline: none;
     border: 1px solid #fff;
-    border-bottom: 2px solid #4A4849;
+    border-bottom: 2px solid #04182b;
     background: #fff;
     -webkit-appearance: none;
 }
 
 .subscribe-main input[type="submit"]:hover {
-    background: #4A4849;
+    background: #04182b;
     color: #fff;
 }
 
 .subscribe-main input[type="submit"] {
     width: 20%;
     float: left;
-    color: #4A4849;
+    color: #04182b;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
@@ -1236,7 +1236,7 @@ h3.title-contact {
 }
 
 .contact-left-w3ls h4 {
-    color: #4A4849;
+    color: #04182b;
     font-weight: 600;
     margin-top: 0.4em;
     font-size: 1.2em;
@@ -1365,7 +1365,7 @@ ul.w3-links {
 
 ul.w3-links li a i.fa {
     color: #f5f5f5;
-    background: #4A4849;
+    background: #04182b;
     font-size: 1em;
     line-height: 2.2em;
     text-align: center;
@@ -1399,7 +1399,7 @@ ul.w3-links li a i.fa:hover {
 }
 
 .footer-main p a {
-    color: #4A4849;
+    color: #04182b;
     text-decoration: none;
     -webkit-transition: .5s all;
     -moz-transition: .5s all;
@@ -1427,7 +1427,7 @@ span.icon_dribbble {
 }
 
 span.icon_g_plus {
-    background: #4A4849;
+    background: #04182b;
 }
 
 .footer-social ul li a {
@@ -1915,7 +1915,7 @@ span.icon_g_plus {
     .navbar-default .navbar-toggle:hover,
     .navbar-default .navbar-toggle:focus,
     .navbar-default .navbar-toggle {
-        background-color: #4A4849;
+        background-color: #04182b;
         color: #fff;
         margin: 0;
     }
