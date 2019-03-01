@@ -1334,21 +1334,21 @@ h3.title-contact {
 }
 
 .contact-main ::-webkit-input-placeholder {
-    color: #fff;
+    color: #000000;
 }
 
 .contact-main :-moz-placeholder {
     /* Firefox 18- */
-    color: #fff;
+    color: #000000;
 }
 
 .contact-main ::-moz-placeholder {
     /* Firefox 19+ */
-    color: #fff;
+    color: #000000;
 }
 
 .contact-main :-ms-input-placeholder {
-    color: #fff;
+    color: #000000;
 }
 
 
