@@ -1,425 +1,1626 @@
-
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
-	<title>Gayan Perera</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Explore Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
-	<script>
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gayan Perera — Lead Software Engineer | Cross-Platform Mobile & Full-Stack Architecture</title>
+  <meta name="description"
+    content="Lead Software Engineer with 10+ years of experience in enterprise mobile architecture, cross-platform development (React Native, .NET MAUI), and technical leadership. Based in Colombo, Sri Lanka.">
+  <meta name="keywords"
+    content="Gayan Perera, Lead Software Engineer, React Native, .NET MAUI, Cross-Platform Mobile, Full-Stack, Enterprise Software, TypeScript, Azure, Sri Lanka">
+  <meta name="author" content="Gayan Perera">
 
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-	</script>
-	<!-- Custom Theme files 1 -->
-	<link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-	<link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen">
-	<!-- chocolate css for gallery light box -->
-	<link href="css/style.css" type="text/css" rel="stylesheet" media="all">
-	<link href="css/font-awesome.css" rel="stylesheet">
-	<!-- font-awesome icons -->
-	<!--//Custom Theme files-->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gayan Perera — Lead Software Engineer">
+  <meta property="og:description"
+    content="10+ years building enterprise mobile and web applications. Specializing in React Native, .NET MAUI, TypeScript, and cloud-native architecture.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
 
-	<!-- web-fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:100,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
-	    rel="stylesheet">
-	<!-- //web-fonts -->
+  <!-- Fonts: Kumbh Sans (headings) + DM Sans (body) per brand guideline -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Kumbh+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#2536E6',
+              50: '#ECEEFF',
+              100: '#D6DBFF',
+              200: '#B0B8FF',
+              300: '#7B8CFF',
+              400: '#4D5EF2',
+              500: '#2536E6',
+              600: '#1B28BF',
+              700: '#141E8F',
+              800: '#0D1560',
+              900: '#0A0E27',
+            }
+          },
+          fontFamily: {
+            heading: ['"Kumbh Sans"', 'system-ui', 'sans-serif'],
+            body: ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ========== BASE RESETS ========== */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem;
+    }
+
+    body {
+      margin: 0;
+      font-family: "DM Sans", system-ui, sans-serif;
+      color: #1a1a2e;
+      background: #ffffff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ========== TYPOGRAPHY ========== */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Kumbh Sans", system-ui, sans-serif;
+    }
+
+    h1 {
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      line-height: 1.7;
+    }
+
+    /* ========== SELECTION ========== */
+    ::selection {
+      background: rgba(37, 54, 230, 0.15);
+      color: #0A0E27;
+    }
+
+    /* ========== CUSTOM SCROLLBAR ========== */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f5;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #7B8CFF;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #2536E6;
+    }
+
+    /* ========== NAVIGATION ========== */
+    .nav-main {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      background: rgba(10, 14, 39, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(123, 140, 255, 0.08);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .nav-main.scrolled {
+      background: rgba(10, 14, 39, 0.95);
+      box-shadow: 0 4px 24px rgba(10, 14, 39, 0.3), 0 1px 4px rgba(37, 54, 230, 0.08);
+    }
+
+    .nav-link {
+      position: relative;
+      color: rgba(255, 255, 255, 0.7);
+      font-family: "DM Sans", sans-serif;
+      font-weight: 500;
+      font-size: 0.875rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.5rem 0;
+      transition: color 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #2536E6;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .nav-link:hover,
+    .nav-link:focus-visible {
+      color: #fff;
+    }
+
+    .nav-link:hover::after,
+    .nav-link:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    .nav-link:active {
+      color: #7B8CFF;
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0A0E27 0%, #141E8F 50%, #0A0E27 100%);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('images/s1.jpg') center/cover no-repeat;
+      opacity: 0.12;
+      mix-blend-mode: luminosity;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 80%, rgba(37, 54, 230, 0.25) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 20%, rgba(123, 140, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(10, 14, 39, 0.4) 0%, transparent 80%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      background: rgba(37, 54, 230, 0.15);
+      border: 1px solid rgba(123, 140, 255, 0.25);
+      border-radius: 100px;
+      color: #7B8CFF;
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .hero-badge-dot {
+      width: 6px;
+      height: 6px;
+      background: #7B8CFF;
+      border-radius: 50%;
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+      }
+    }
+
+    .hero-name {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.05;
+      margin: 1.25rem 0 0.75rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.4;
+    }
+
+    .hero-title strong {
+      color: #7B8CFF;
+      font-weight: 600;
+    }
+
+    .hero-desc {
+      max-width: 540px;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.55);
+      line-height: 1.7;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat-value {
+      font-family: "Kumbh Sans", sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .hero-stat-label {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.45);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 0.35rem;
+    }
+
+    /* Geometric decorations */
+    .hero-geo {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(123, 140, 255, 0.1);
+      z-index: 1;
+    }
+
+    .hero-geo-1 {
+      width: 400px;
+      height: 400px;
+      top: -100px;
+      right: -100px;
+    }
+
+    .hero-geo-2 {
+      width: 250px;
+      height: 250px;
+      bottom: -60px;
+      left: -60px;
+      border-color: rgba(37, 54, 230, 0.12);
+    }
+
+    .hero-geo-3 {
+      width: 120px;
+      height: 120px;
+      top: 30%;
+      right: 15%;
+      border-width: 2px;
+      border-color: rgba(123, 140, 255, 0.06);
+    }
+
+    /* ========== SECTION SHARED ========== */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #2536E6;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 32px;
+      height: 2px;
+      background: #2536E6;
+      border-radius: 1px;
+    }
+
+    .section-heading {
+      font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      color: #0A0E27;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .section-sub {
+      font-size: 1.05rem;
+      color: #555;
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    /* ========== ABOUT ========== */
+    .about-pillar {
+      padding: 1.75rem;
+      background: #fff;
+      border: 1px solid #eef0f6;
+      border-radius: 12px;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .about-pillar:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(37, 54, 230, 0.08), 0 2px 8px rgba(37, 54, 230, 0.04);
+    }
+
+    .about-pillar:focus-visible {
+      outline: 2px solid #2536E6;
+      outline-offset: 2px;
+    }
+
+    .pillar-icon {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ECEEFF;
+      border-radius: 10px;
+      color: #2536E6;
+      margin-bottom: 1rem;
+    }
+
+    /* ========== EXPERIENCE TIMELINE ========== */
+    .timeline {
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 23px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, #D6DBFF, #2536E6, #D6DBFF);
+    }
+
+    @media (min-width: 768px) {
+      .timeline::before {
+        left: 50%;
+        transform: translateX(-1px);
+      }
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 60px;
+      padding-bottom: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .timeline-item {
+        padding-left: 0;
+        padding-bottom: 4rem;
+      }
+
+      .timeline-item:nth-child(odd) {
+        padding-right: calc(50% + 40px);
+        text-align: right;
+      }
+
+      .timeline-item:nth-child(even) {
+        padding-left: calc(50% + 40px);
+      }
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 15px;
+      top: 4px;
+      width: 18px;
+      height: 18px;
+      background: #fff;
+      border: 3px solid #2536E6;
+      border-radius: 50%;
+      z-index: 2;
+    }
+
+    .timeline-dot-active {
+      background: #2536E6;
+      box-shadow: 0 0 0 4px rgba(37, 54, 230, 0.15);
+    }
+
+    @media (min-width: 768px) {
+      .timeline-dot {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    .timeline-card {
+      background: #fff;
+      border: 1px solid #eef0f6;
+      border-radius: 12px;
+      padding: 1.75rem;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .timeline-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(37, 54, 230, 0.06), 0 2px 6px rgba(10, 14, 39, 0.04);
+    }
+
+    .timeline-period {
+      display: inline-block;
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #2536E6;
+      background: #ECEEFF;
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .timeline-role {
+      font-family: "Kumbh Sans", sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #0A0E27;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-company {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 0.75rem;
+    }
+
+    .timeline-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .timeline-bullets li {
+      position: relative;
+      padding-left: 1.25rem;
+      font-size: 0.9rem;
+      color: #444;
+      line-height: 1.65;
+      margin-bottom: 0.4rem;
+    }
+
+    @media (min-width: 768px) {
+      .timeline-item:nth-child(odd) .timeline-bullets li {
+        padding-left: 0;
+        padding-right: 1.25rem;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-bullets li::before {
+        left: auto;
+        right: 0;
+      }
+    }
+
+    .timeline-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 5px;
+      height: 5px;
+      background: #7B8CFF;
+      border-radius: 50%;
+    }
+
+    /* ========== PROJECT CARDS ========== */
+    .project-card {
+      background: #fff;
+      border: 1px solid #eef0f6;
+      border-radius: 14px;
+      padding: 2rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(37, 54, 230, 0.1), 0 4px 12px rgba(37, 54, 230, 0.04);
+    }
+
+    .project-card-icon {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      margin-bottom: 1.25rem;
+    }
+
+    .project-card-title {
+      font-family: "Kumbh Sans", sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #0A0E27;
+      margin-bottom: 0.35rem;
+    }
+
+    .project-card-client {
+      font-size: 0.8rem;
+      color: #2536E6;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-card-desc {
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.65;
+      flex-grow: 1;
+      margin-bottom: 1.25rem;
+    }
+
+    .project-tech-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: #2536E6;
+      background: #ECEEFF;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      margin: 0.15rem 0.15rem;
+      letter-spacing: 0.02em;
+    }
+
+    /* ========== SKILLS GRID ========== */
+    .skill-category {
+      padding: 1.5rem;
+      background: #fff;
+      border: 1px solid #eef0f6;
+      border-radius: 12px;
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .skill-category:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(37, 54, 230, 0.06);
+    }
+
+    .skill-category-title {
+      font-family: "Kumbh Sans", sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #0A0E27;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .skill-category-title svg {
+      flex-shrink: 0;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      color: #444;
+      background: #f7f8fc;
+      padding: 0.3rem 0.65rem;
+      border-radius: 6px;
+      margin: 0.2rem 0.15rem;
+      font-weight: 400;
+      border: 1px solid #eef0f6;
+    }
+
+    /* ========== EDUCATION & CERTIFICATIONS ========== */
+    .edu-card {
+      padding: 1.75rem;
+      background: #fff;
+      border: 1px solid #eef0f6;
+      border-radius: 12px;
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .edu-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(37, 54, 230, 0.06);
+    }
+
+    .cert-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.875rem 1rem;
+      background: #fafbfe;
+      border: 1px solid #eef0f6;
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s ease, background 0.25s ease;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-2px);
+      background: #ffffff;
+      border-color: #D6DBFF;
+      box-shadow: 0 4px 16px rgba(37, 54, 230, 0.08);
+    }
+
+    .cert-card:focus-visible {
+      outline: 2px solid #2536E6;
+      outline-offset: 2px;
+    }
+
+
+    /* ========== CONTACT CTA ========== */
+    .cta-section {
+      background: linear-gradient(135deg, #0A0E27 0%, #141E8F 60%, #2536E6 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 70%, rgba(123, 140, 255, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 30%, rgba(37, 54, 230, 0.15) 0%, transparent 50%);
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1), background 0.25s ease;
+    }
+
+    .cta-btn:focus-visible {
+      outline: 2px solid #7B8CFF;
+      outline-offset: 2px;
+    }
+
+    .cta-btn-primary {
+      background: #fff;
+      color: #0A0E27;
+    }
+
+    .cta-btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
+    }
+
+    .cta-btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .cta-btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .cta-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+    }
+
+    .cta-btn-secondary:active {
+      transform: translateY(0);
+    }
+
+    /* ========== SCROLL REVEAL ========== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: 0.3s;
+    }
+
+    .reveal-delay-4 {
+      transition-delay: 0.4s;
+    }
+
+    /* ========== REDUCED MOTION ========== */
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* ========== MOBILE MENU ========== */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .mobile-menu-btn:hover {
+      color: #fff;
+    }
+
+    .mobile-menu-btn:focus-visible {
+      outline: 2px solid #7B8CFF;
+      outline-offset: 2px;
+    }
+
+    @media (max-width: 767px) {
+      .mobile-menu-btn {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(10, 14, 39, 0.98);
+        border-top: 1px solid rgba(123, 140, 255, 0.08);
+        padding: 1rem 1.5rem;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-link {
+        padding: 0.75rem 0;
+        display: block;
+      }
+    }
+
+    /* ========== FOOTER ========== */
+    .footer-link {
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: color 0.25s ease;
+    }
+
+    .footer-link:hover,
+    .footer-link:focus-visible {
+      color: #7B8CFF;
+    }
+
+    .footer-link:active {
+      color: #2536E6;
+    }
+
+    /* ========== SKIP TO CONTENT ========== */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      background: #2536E6;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0 0 8px 8px;
+      font-weight: 600;
+      z-index: 100;
+      text-decoration: none;
+      transition: top 0.2s ease;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* ========== GRAIN TEXTURE ========== */
+    .grain::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.03;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 128px 128px;
+    }
+  </style>
 </head>
+
 <body>
-<div class="header-agileinfo">
-		<div class="header-banner text-center">
-			<div class="container">
-				<div class="header-bottom">
-					<div class="col-md-4 col-sm-4 header-left">
-						<span class="fa fa-envelope-o icon" aria-hidden="true"></span>
-						<a href="mailto:mgdperera@gmail.com">mgdperera@gmail.com</a>
-					</div>
-					<div class="col-md-4 col-sm-4 logo">
-						<h1 class="main-title">
-							<a href="index.html">Explore</a>
+  <!-- Skip to content for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-						</h1>
-					</div>
-				
-					<div class="clearfix"></div>
-				</div>
-				<div class="banner-text">
-					<h4>Hi welcome to my site!</h4>
-					<h3>i'm Gayan</h3>
-					<div class="banner-slide">
-						<h2 class="bnrtext">ask me</h2>
-						<b>
-							<span class="span1">
-								 Mobile
-								<br /> Business
-								<br /> Xamarin
-								<br /> IOS
-								<br /> Management
-							</span>
-						</b>
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="nav-main" id="navbar" role="navigation" aria-label="Primary navigation">
+    <div class="max-w-6xl mx-auto px-5 flex items-center justify-between h-16">
+      <a href="#" class="font-heading font-bold text-white text-lg tracking-tight" aria-label="Gayan Perera - Home">
+        <span class="text-brand-300">G</span><span class="opacity-80">P</span>
+      </a>
+      <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6" class="menu-line-1" />
+          <line x1="3" y1="12" x2="21" y2="12" class="menu-line-2" />
+          <line x1="3" y1="18" x2="21" y2="18" class="menu-line-3" />
+        </svg>
+      </button>
+      <div class="nav-links flex items-center gap-8" id="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-						<div class="clearfix"></div>
-					</div>
-				</div>
-			</div>
+  <!-- ==================== HERO ==================== -->
+  <header class="hero grain" id="hero" role="banner">
+    <div class="hero-geo hero-geo-1"></div>
+    <div class="hero-geo hero-geo-2"></div>
+    <div class="hero-geo hero-geo-3"></div>
 
-		</div>
+    <div class="hero-content max-w-6xl mx-auto px-5 w-full py-32 md:py-0">
+      <div class="hero-badge" aria-label="Available for opportunities">
+        <span class="hero-badge-dot" aria-hidden="true"></span>
+        Available for Opportunities
+      </div>
+      <h1 class="hero-name">Gayan Perera</h1>
+      <p class="hero-title">
+        <strong>Lead Software Engineer</strong><br>
+        Cross-Platform Mobile &amp; Full-Stack Architecture
+      </p>
+      <p class="hero-desc">
+        Designing and delivering enterprise-grade mobile and web applications
+        for over a decade — from concept through App Store and Play Store deployment.
+      </p>
+      <div class="hero-stats" aria-label="Career highlights">
+        <div>
+          <div class="hero-stat-value">10+</div>
+          <div class="hero-stat-label">Years in Industry</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">8+</div>
+          <div class="hero-stat-label">Enterprise Projects</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">2</div>
+          <div class="hero-stat-label">Companies</div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-		
-	</div>
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main-content">
 
-	<div class="about section-w3layouts main-pos" id="about">
-		<h3 class="pos-title">about me</h3>
-		<div class="container">
-			<h4 class="sec-title">profile</h4>
-		
-			<div class="about-btm-w3_agileits">
-				<div class="grid-flex">
-					<div class="ab1 main-about-grid1">
-						<span class="fa fa-graduation-cap  wthree-title-list" aria-hidden="true"></span>
-						<h4 class="aboutbtm-head">education</h4>
-								<h5>Master of Business Administration</h5>
-						<p>Anglia Ruskin University (2017 - 2019)</p>
-						<h5>BEng (Hons) Software Engineering </h5>
-						<p>Staffordshire University (2013 - 2016)</p>
-					</div>
-					<div class="ab1 main-about-grid2">
-						<span class="fa fa-shield  wthree-title-list" aria-hidden="true"></span>
-						<h4 class="aboutbtm-head">expertise</h4>
-						
-						<h5>Associate Consultant</h5>
-						<p>Virtusa (2019 - present)</p>
-						<h5>software engineer</h5>
-						<p>Virtusa (2017 - 2019)</p>
-						<h5>associate software engineer</h5>
-						<p>Virtusa (2016 - 2017)</p>
+    <!-- ==================== ABOUT ==================== -->
+    <section class="py-20 md:py-28 bg-white" id="about" aria-labelledby="about-heading">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="reveal">
+          <div class="section-label">About</div>
+          <h2 class="section-heading" id="about-heading">Engineering Enterprise Software<br class="hidden md:block">
+            Across Platforms</h2>
+          <p class="section-sub mb-12">
+            Lead Software Engineer with a career spanning cross-platform mobile development,
+            enterprise architecture, and technical leadership. I specialize in building resilient,
+            offline-capable mobile systems that integrate deeply with complex backend ecosystems —
+            and in leading the engineering teams that deliver them.
+          </p>
+        </div>
 
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- Pillar 1 -->
+          <div class="about-pillar reveal reveal-delay-1" tabindex="0">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <rect x="5" y="2" width="14" height="20" rx="2" />
+                <line x1="12" y1="18" x2="12" y2="18.01" stroke-width="2.5" />
+              </svg>
+            </div>
+            <h3 class="font-heading font-semibold text-brand-900 text-base mb-2">Mobile Engineering</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">Full-lifecycle mobile development with React Native, .NET
+              MAUI, and Xamarin — from architecture through App Store and Play Store deployment.</p>
+          </div>
+          <!-- Pillar 2 -->
+          <div class="about-pillar reveal reveal-delay-2" tabindex="0">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>
+            </div>
+            <h3 class="font-heading font-semibold text-brand-900 text-base mb-2">Enterprise Architecture</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">Designing scalable systems with offline-first patterns, BLE
+              communication, real-time data streaming, and complex cloud backend integration.</p>
+          </div>
+          <!-- Pillar 3 -->
+          <div class="about-pillar reveal reveal-delay-3" tabindex="0">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h3 class="font-heading font-semibold text-brand-900 text-base mb-2">Technical Leadership</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">Leading engineering teams through design reviews,
+              architectural decisions, mentoring, and cross-functional collaboration with product and QA stakeholders.
+            </p>
+          </div>
+          <!-- Pillar 4 -->
+          <div class="about-pillar reveal reveal-delay-4" tabindex="0">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+            </div>
+            <h3 class="font-heading font-semibold text-brand-900 text-base mb-2">Cloud &amp; DevOps</h3>
+            <p class="text-sm text-gray-500 leading-relaxed">Azure and GCP experience across CI/CD pipelines, serverless
+              functions, authentication, cloud storage, and Firebase-powered backends.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-					</div>
-					<div class="ab1 main-about-grid3">
-						<span class="fa fa-trophy" aria-hidden="true"></span>
-						<h4 class="aboutbtm-head">awards and Certifications</h4>
-						<h5>RICE In Computing Finalist best solution for industrial</h5>
-						<h5>Business,Law & Technology Conference 2016</h5>
-						<h5>Udemy Scrum, IOS, Deep learning and Finance Account modeling </h5>
-								</div>
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		
-		</div>
-	</div>
+    <!-- ==================== EXPERIENCE ==================== -->
+    <section class="py-20 md:py-28" style="background: #f9fafb;" id="experience" aria-labelledby="experience-heading">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="text-center mb-16 reveal">
+          <div class="section-label justify-center">Experience</div>
+          <h2 class="section-heading" id="experience-heading">Career Progression</h2>
+          <p class="section-sub mx-auto">A decade of growth — from hands-on development through enterprise engineering
+            to technical leadership.</p>
+        </div>
 
-	<div class="skills section-w3layouts main-pos" id="skills">
-		<h3 class="pos-title">expertise</h3>
-		<div class="container">
-			<h4 class="sec-title">my skills</h4>
+        <div class="timeline max-w-4xl mx-auto">
+          <!-- Role 5: Lead Software Engineer - IFS -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot timeline-dot-active" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-period">2023 — 2026</div>
+              <h3 class="timeline-role">Lead Software Engineer</h3>
+              <p class="timeline-company">IFS · Colombo, Sri Lanka</p>
+              <ul class="timeline-bullets">
+                <li>Led architecture and development of enterprise Mobile Workforce Management solutions within the IFS
+                  Cloud ecosystem, integrating with Service Management, Asset Management, Scheduling, and Work Orders.
+                </li>
+                <li>Directed code reviews, engineering design discussions, and architectural decisions to ensure
+                  long-term code quality and scalability across the mobile platform.</li>
+                <li>Provided technical mentorship on offline-first mobile capabilities, ensuring reliable performance in
+                  low- and no-connectivity environments.</li>
+                <li>Accelerated real-time telemetry ingestion by 30% through custom BLE communication protocols for
+                  continuous sensor data streaming.</li>
+                <li>Strengthened test coverage with 200+ automated mobile tests using Katalon Studio.</li>
+              </ul>
+            </div>
+          </div>
 
-			<div class="row">
-				<div class="skills-bar">
-					<h3 class="progress-title">Xamarin & Native IOS</h3>
-					<div class="progress  green">
-						<div class="progress-bar" style="width:90%; background:#ffffff">
-							<div class="progress-value">90%</div>
-						</div>
-					</div>
-					<h3 class="progress-title">Agile and Scrum</h3>
-					<div class="progress blue">
-						<div class="progress-bar" style="width:75%; background:#ffffff;">
-							<div class="progress-value">75%</div>
-						</div>
-					</div>
-					<h3 class="progress-title">Cognitive services</h3>
-					<div class="progress blue">
-						<div class="progress-bar" style="width:95%; background:#ffffff;">
-							<div class="progress-value">75%</div>
-						</div>
-					</div>
-					<h3 class="progress-title">AWS,IBM,Google cloud </h3>
-					<div class="progress blue">
-						<div class="progress-bar" style="width:75%; background:#ffffff;">
-							<div class="progress-value">85%</div>
-						</div>
-					</div>
+          <!-- Role 4: Consultant - Virtusa -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-period">2021 — 2023</div>
+              <h3 class="timeline-role">Consultant</h3>
+              <p class="timeline-company">Virtusa · Colombo, Sri Lanka</p>
+              <ul class="timeline-bullets">
+                <li>Delivered end-to-end mobile applications across enterprise clients including IM Smart Sort, British
+                  Telecom Janga, and Billdr using React Native, React, and TypeScript.</li>
+                <li>Architected cloud-native backends spanning GCP and Azure — Firebase, serverless functions, Azure AD,
+                  and CI/CD pipelines.</li>
+                <li>Mentored cross-functional React Native teams, setting coding standards and driving architecture best
+                  practices.</li>
+                <li>Integrated FCM and analytics for real-time user engagement and actionable product insights.</li>
+              </ul>
+            </div>
+          </div>
 
-					<h3 class="progress-title">Leadership, and Management</h3>
-					<div class="progress yellow">
-						<div class="progress-bar" style="width:90%; background:#ffffff;">
-							<div class="progress-value">90%</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+          <!-- Role 3: Associate Consultant - Virtusa -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-period">2018 — 2021</div>
+              <h3 class="timeline-role">Associate Consultant</h3>
+              <p class="timeline-company">Virtusa · Colombo, Sri Lanka</p>
+              <ul class="timeline-bullets">
+                <li>Full-stack development for global clients including DealerBuilt, BallPots, and Pratt & Whitney using
+                  .NET, React.js, React Native, Xamarin, and TypeScript.</li>
+                <li>Built real-time communication features via WebSocket protocols for low-latency mobile experiences.
+                </li>
+                <li>Designed cross-platform enterprise apps with Azure AD authentication and .NET Web API backends.</li>
+                <li>Managed CI/CD through Azure DevOps — automated build, test, and release pipelines including App
+                  Store publishing.</li>
+              </ul>
+            </div>
+          </div>
 
+          <!-- Role 2: Software Engineer - Virtusa -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-period">2017 — 2018</div>
+              <h3 class="timeline-role">Software Engineer</h3>
+              <p class="timeline-company">Virtusa · Colombo, Sri Lanka</p>
+              <ul class="timeline-bullets">
+                <li>Developed REST APIs with .NET and Entity Framework, and built mobile applications for Pratt &
+                  Whitney's MY APPROVAL system on iOS and Android.</li>
+                <li>Collaborated on application architecture, business logic, and delivered project updates directly to
+                  client stakeholders.</li>
+              </ul>
+            </div>
+          </div>
 
-	<div class="blog main-pos section-w3layouts" id="blog">
-		<h3 class="pos-title postitle4">my diary</h3>
+          <!-- Role 1: Associate Software Engineer - Virtusa -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <div class="timeline-card">
+              <div class="timeline-period">2016 — 2017</div>
+              <h3 class="timeline-role">Associate Software Engineer</h3>
+              <p class="timeline-company">Virtusa · Colombo, Sri Lanka</p>
+              <ul class="timeline-bullets">
+                <li>Designed and developed mobile applications for AVIVA Insurance using Xamarin.Forms for iOS and
+                  Android with responsive UI for phones and tablets.</li>
+                <li>Implemented business logic, networking layers, and unit testing to maintain high code quality.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<div class="container">
-			<h4 class="sec-title">my diary</h4>
-			<div class="blog-sec-w3_agile-grids">
-				<div class="blog-sub">
-					<div class="col-md-8 blog-sec-w3_agile b1">
-						<div class="blog-top"></div>
-						<div class="col-md-6 blog-img img1">
-							<a href="#" data-toggle="modal" data-target="#myModal">
-								<img src="images/a5.jpg" alt="" class="img-responsive" />
-							</a>
-						</div>
-						<div class="col-md-6 blog-bottom bb1">
-							<div class="post-info">
-								<ul>
-									<li class="blog-icon-left">By
-										<a href="#">Santosh Kalwar</a>
-									</li>
-									<li class="blog-icon-right">
-										<a href="#">
-											<span class="fa fa-heart" aria-hidden="true"></span>
-										</a></li>
-								</ul>
-								<div class="clearfix"></div>
-					
-								<p>"O holy Sunday, let your darkness not come along my way. Let her nurture internal and external world, as I start my personal day.."</p>
-							</div>
-							
-						
-						</div>
+    <!-- ==================== FEATURED PROJECTS ==================== -->
+    <section class="py-20 md:py-28 bg-white" id="projects" aria-labelledby="projects-heading">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="text-center mb-16 reveal">
+          <div class="section-label justify-center">Featured Projects</div>
+          <h2 class="section-heading" id="projects-heading">Enterprise Systems I've Contributed</h2>
+          <p class="section-sub mx-auto">Selected projects demonstrating technical depth across mobile, full-stack, and
+            enterprise domains.</p>
+        </div>
 
-					</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Project 1: IFS MWM -->
+          <div class="project-card reveal reveal-delay-1">
+            <div class="project-card-icon" style="background: #ECEEFF;">
+              <svg width="24" height="24" fill="none" stroke="#2536E6" stroke-width="1.8" viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <path d="M14 2v6h6" />
+                <path d="M16 13H8" />
+                <path d="M16 17H8" />
+                <path d="M10 9H8" />
+              </svg>
+            </div>
+            <h3 class="project-card-title">IFS Mobile Workforce Management</h3>
+            <p class="project-card-client">IFS · 2023–2026</p>
+            <p class="project-card-desc">
+              Led the architecture of enterprise-grade mobile workforce solutions within the IFS Cloud ecosystem.
+              Built offline-first capabilities for reliable field operations, designed custom BLE protocols for
+              real-time telemetry from connected sensors, and integrated with core IFS modules including
+              Service Management, Asset Management, and Work Orders.
+            </p>
+            <div>
+              <span class="project-tech-tag">.NET MAUI</span>
+              <span class="project-tech-tag">Katalon</span>
+              <span class="project-tech-tag">BLE</span>
+              <span class="project-tech-tag">Offline-First</span>
+              <span class="project-tech-tag">IFS Cloud</span>
+            </div>
+          </div>
 
-					<div class="col-md-4  blog-sec-w3_agile">
+          <!-- Project 2: British Telecom Janga -->
+          <div class="project-card reveal reveal-delay-2">
+            <div class="project-card-icon" style="background: #E8F5E9;">
+              <svg width="24" height="24" fill="none" stroke="#2E7D32" stroke-width="1.8" viewBox="0 0 24 24">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l2.27-2.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+            </div>
+            <h3 class="project-card-title">British Telecom Janga</h3>
+            <p class="project-card-client">Virtusa · 2021–2023</p>
+            <p class="project-card-desc">
+              End-to-end cross-platform mobile application development for British Telecom using React Native
+              and TypeScript. Engineered responsive, pixel-accurate UI from third-party designs with reusable
+              components. Architected cloud-native backend integration spanning Firebase and Azure services with
+              CI/CD pipeline automation.
+            </p>
+            <div>
+              <span class="project-tech-tag">React Native</span>
+              <span class="project-tech-tag">TypeScript</span>
+              <span class="project-tech-tag">Redux</span>
+              <span class="project-tech-tag">Firebase</span>
+              <span class="project-tech-tag">Azure</span>
+            </div>
+          </div>
 
-						<div class="blog-bottom bb2">
-							<div class="post-info">
-								<ul>
-									<li class="blog-icon-left">By
-										<a href="#">Richard Branson</a>
-									</li>
-									<li class="blog-icon-right">
-										<a href="#">
-											<span class="fa fa-heart" aria-hidden="true"></span>
-										</a></li>
-								</ul>
-								<div class="clearfix"></div>
-							
-								<p>Being a good listener is absolutely critical to being a good leader; you have to listen to the people who are on the front line.</p>
-							</div>
-						</div>
-						<div class="blog-img">
-							<a href="#" data-toggle="modal" data-target="#myModal">
-								<img src="images/a3.jpg" alt="" class="img-responsive" />
-							</a>
-						</div>
-					</div>
-					<div class="clearfix"></div>
+          <!-- Project 3: DealerBuilt -->
+          <div class="project-card reveal reveal-delay-3">
+            <div class="project-card-icon" style="background: #FFF3E0;">
+              <svg width="24" height="24" fill="none" stroke="#E65100" stroke-width="1.8" viewBox="0 0 24 24">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+            </div>
+            <h3 class="project-card-title">DealerBuilt</h3>
+            <p class="project-card-client">Virtusa · 2018–2021</p>
+            <p class="project-card-desc">
+              Full-stack enterprise application combining .NET Web APIs, React.js frontend, and PostgreSQL / MS SQL
+              databases. Integrated with Azure Storage for scalable data management. Built real-time features
+              using WebSocket protocols for bi-directional, low-latency communication.
+            </p>
+            <div>
+              <span class="project-tech-tag">.NET</span>
+              <span class="project-tech-tag">React.js</span>
+              <span class="project-tech-tag">PostgreSQL</span>
+              <span class="project-tech-tag">Azure</span>
+              <span class="project-tech-tag">WebSocket</span>
+            </div>
+          </div>
 
-					<div class="col-md-4 blog-sec-w3_agile b1">
+          <!-- Project 4: Pratt & Whitney -->
+          <div class="project-card reveal reveal-delay-4">
+            <div class="project-card-icon" style="background: #F3E5F5;">
+              <svg width="24" height="24" fill="none" stroke="#7B1FA2" stroke-width="1.8" viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h3 class="project-card-title">Pratt &amp; Whitney — MY APPROVAL</h3>
+            <p class="project-card-client">Virtusa · 2017–2018</p>
+            <p class="project-card-desc">
+              Native mobile approval system for the aerospace manufacturer, built with Xamarin for iOS and Android.
+              Developed REST APIs using .NET and Entity Framework, implemented complete mobile application architecture,
+              and maintained direct communication with enterprise client stakeholders.
+            </p>
+            <div>
+              <span class="project-tech-tag">Xamarin</span>
+              <span class="project-tech-tag">.NET</span>
+              <span class="project-tech-tag">Entity Framework</span>
+              <span class="project-tech-tag">REST API</span>
+              <span class="project-tech-tag">iOS/Android</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-						<div class="blog-bottom bb3">
-							<div class="post-info">
-								<ul>
-									<li class="blog-icon-left">By
-										<a href="#"> Michael Bassey</a>
-									</li>
-									<li class="blog-icon-right">
-										<a href="#">
-											<span class="fa fa-heart" aria-hidden="true"></span>
-										</a></li>
-								</ul>
-								<div class="clearfix"></div>
-						
-								<p>If you really want to be different, you'd better keep quiet and be a good person on the inside.
-								</p>
-							</div>
-					
-						</div>
-						<div class="blog-img">
-							<a href="#" data-toggle="modal" data-target="#myModal">
-								<img src="images/a3.jpg" alt="" class="img-responsive" />
-							</a>
-						</div>
+    <!-- ==================== TECHNICAL SKILLS ==================== -->
+    <section class="py-20 md:py-28" style="background: #f9fafb;" id="skills" aria-labelledby="skills-heading">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="text-center mb-16 reveal">
+          <div class="section-label justify-center">Technical Skills</div>
+          <h2 class="section-heading" id="skills-heading">Engineering Capabilities</h2>
+          <p class="section-sub mx-auto">Technologies and practices refined across a decade of enterprise software
+            delivery.</p>
+        </div>
 
-					</div>
-					<div class="col-md-8 blog-sec-w3_agile b3 ">
-						<div class="col-md-6 blog-img img1">
-							<a href="#" data-toggle="modal" data-target="#myModal">
-								<img src="images/a4.jpg" alt="" class="img-responsive" />
-							</a>
-						</div>
-						<div class="col-md-6 blog-bottom bb4">
-							<div class="post-info">
-								<ul>
-									<li class="blog-icon-left">By
-										<a href="#">Haruki Murakami</a>
-									</li>
-									<li class="blog-icon-right">
-										<a href="#">
-											<span class="fa fa-heart" aria-hidden="true"></span>
-										</a></li>
-								</ul>
-								<div class="clearfix"></div>
-						
-								<p>I'm just ordinary guy, ordinary family, ordinary education, ordinary face, ordinary exam results, ordinary thought in my head...
-								</p>
-							</div>
-						
-						</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- Mobile Engineering -->
+          <div class="skill-category reveal reveal-delay-1">
+            <h3 class="skill-category-title">
+              <svg width="18" height="18" fill="none" stroke="#2536E6" stroke-width="1.8" viewBox="0 0 24 24">
+                <rect x="5" y="2" width="14" height="20" rx="2" />
+                <line x1="12" y1="18" x2="12" y2="18.01" stroke-width="2.5" />
+              </svg>
+              Mobile Engineering
+            </h3>
+            <div>
+              <span class="skill-tag">React Native</span>
+              <span class="skill-tag">.NET MAUI</span>
+              <span class="skill-tag">Xamarin</span>
+              <span class="skill-tag">Expo</span>
+              <span class="skill-tag">Native iOS</span>
+              <span class="skill-tag">Native Android</span>
+              <span class="skill-tag">Swift</span>
+              <span class="skill-tag">BLE Integration</span>
+              <span class="skill-tag">App Store Deployment</span>
+              <span class="skill-tag">Play Store Deployment</span>
+            </div>
+          </div>
 
-						<div class="clearfix"></div>
-						<div class="blog-top blog-top2"></div>
+          <!-- Frontend -->
+          <div class="skill-category reveal reveal-delay-2">
+            <h3 class="skill-category-title">
+              <svg width="18" height="18" fill="none" stroke="#2536E6" stroke-width="1.8" viewBox="0 0 24 24">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+              Frontend
+            </h3>
+            <div>
+              <span class="skill-tag">React.js</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Redux</span>
+              <span class="skill-tag">GraphQL</span>
+              <span class="skill-tag">Responsive Design</span>
+              <span class="skill-tag">REST APIs</span>
+            </div>
+          </div>
 
-					</div>
+          <!-- Backend -->
+          <div class="skill-category reveal reveal-delay-3">
+            <h3 class="skill-category-title">
+              <svg width="18" height="18" fill="none" stroke="#2536E6" stroke-width="1.8" viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="8" rx="2" />
+                <rect x="2" y="14" width="20" height="8" rx="2" />
+                <line x1="6" y1="6" x2="6.01" y2="6" stroke-width="2.5" />
+                <line x1="6" y1="18" x2="6.01" y2="18" stroke-width="2.5" />
+              </svg>
+              Backend
+            </h3>
+            <div>
+              <span class="skill-tag">.NET / C#</span>
+              <span class="skill-tag">Entity Framework</span>
+              <span class="skill-tag">Web APIs</span>
+              <span class="skill-tag">WebSocket</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">MS SQL</span>
+              <span class="skill-tag">Microservices</span>
+            </div>
+          </div>
 
+          <!-- Cloud & DevOps -->
+          <div class="skill-category reveal reveal-delay-1">
+            <h3 class="skill-category-title">
+              <svg width="18" height="18" fill="none" stroke="#2536E6" stroke-width="1.8" viewBox="0 0 24 24">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+              </svg>
+              Cloud &amp; DevOps
+            </h3>
+            <div>
+              <span class="skill-tag">Microsoft Azure</span>
+              <span class="skill-tag">Google Cloud Platform</span>
+              <span class="skill-tag">Firebase</span>
+              <span class="skill-tag">Azure DevOps</span>
+              <span class="skill-tag">CI/CD Pipelines</span>
+              <span class="skill-tag">Azure AD</span>
+              <span class="skill-tag">Azure Functions</span>
+              <span class="skill-tag">FCM</span>
+            </div>
+          </div>
 
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //blog -->
+          <!-- Architecture & Design -->
+          <div class="skill-category reveal reveal-delay-2">
+            <h3 class="skill-category-title">
+              <svg width="18" height="18" fill="none" stroke="#2536E6" stroke-width="1.8" viewBox="0 0 24 24">
+                <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2" />
+                <line x1="12" y1="22" x2="12" y2="15.5" />
+                <polyline points="22 8.5 12 15.5 2 8.5" />
+              </svg>
+              Architecture &amp; Design
+            </h3>
+            <div>
+              <span class="skill-tag">System Design</span>
+              <span class="skill-tag">Offline-First Architecture</span>
+              <span class="skill-tag">Design Patterns</span>
+              <span class="skill-tag">MVVM / MVC</span>
+              <span class="skill-tag">Real-Time Streaming</span>
+              <span class="skill-tag">Adapter / Facade / Singleton</span>
+            </div>
+          </div>
 
-	<!-- //contact -->
-	<!-- subscribe -->
-	<div  class="subscribe-main section-w3layouts text-center">
-		<div class="subscribe-head">
-			<h4 class="sec-title">Ping me </h4>
-			<h6>by</h6>
-			<h5>MGDPERERA@GMAIL.COM</h5>
-			<!-- <p class="sub-p">Never miss out on latest sales and best offers!</p> -->
-		</div>
-	</div>
-	<!-- //subscribe -->
-	<div class="footer-main">
-		<!-- <div class="footer-social">
-			<h4>follow me</h4>
-			<ul>
-				<li>
-					<a href="#">
-						<span class="fa fa-facebook icon_facebook"></span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<span class="fa fa-twitter icon_twitter"></span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<span class="fa fa-dribbble icon_dribbble"></span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<span class="fa fa-google-plus icon_g_plus"></span>
-					</a>
-				</li>
-			</ul>
-		</div> -->
-		<div class="cpy-right">
-			<p>All rights reserved | Design by
-				 Gayan Perera</a>
-			</p>
-		</div>
-	</div>
+          <!-- Testing & Quality -->
+          <div class="skill-category reveal reveal-delay-3">
+            <h3 class="skill-category-title">
+              <svg width="18" height="18" fill="none" stroke="#2536E6" stroke-width="1.8" viewBox="0 0 24 24">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                <polyline points="22 4 12 14.01 9 11.01" />
+              </svg>
+              Testing &amp; Quality
+            </h3>
+            <div>
+              <span class="skill-tag">Katalon Studio</span>
+              <span class="skill-tag">Detox (E2E)</span>
+              <span class="skill-tag">Unit Testing</span>
+              <span class="skill-tag">Test Automation</span>
+              <span class="skill-tag">Jira</span>
+              <span class="skill-tag">Git</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ==================== EDUCATION & CERTIFICATIONS ==================== -->
+    <section class="py-20 md:py-28 bg-white" id="education" aria-labelledby="education-heading">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="text-center mb-16 reveal">
+          <div class="section-label justify-center">Education</div>
+          <h2 class="section-heading" id="education-heading">Academic Background</h2>
+        </div>
 
-	<!-- modal -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-16">
+          <!-- MBA -->
+          <div class="edu-card reveal reveal-delay-1">
+            <div class="flex items-start gap-3 mb-3">
+              <div class="pillar-icon flex-shrink-0" aria-hidden="true" style="width:40px;height:40px;">
+                <svg width="20" height="20" fill="none" stroke="#2536E6" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-heading font-semibold text-brand-900 text-base leading-tight">Master of Business
+                  Administration</h3>
+                <p class="text-sm text-gray-500 mt-1">Anglia Ruskin University — UK</p>
+                <p class="text-xs text-brand-500 font-medium mt-1">2017 — 2019</p>
+              </div>
+            </div>
+          </div>
 
-	<div class="modal about-modal fade" id="myModal" tabindex="-1" role="dialog">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-					<h4 class="modal-title">explore</h4>
-				</div>
-				<div class="modal-body">
-					<div class="model-info">
-						<img src="images/bg2.jpg" alt="" />
-						<p>Duis venenatis, turpis eu bibendum porttitor, sapien quam ultricies tellus, ac rhoncus risus odio eget nunc. Pellentesque
-							ac fermentum diam. Integer eu facilisis nunc, a iaculis felis. Pellentesque pellentesque tempor enim, in dapibus turpis
-							porttitor quis. Suspendisse ultrices hendrerit massa. Nam id metus id tellus ultrices ullamcorper. Cras tempor massa
-							luctus, varius lacus sit amet, blandit lorem. Duis auctor in tortor sed tristique. Proin sed finibus sem.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- //modal -->
+          <!-- BEng -->
+          <div class="edu-card reveal reveal-delay-2">
+            <div class="flex items-start gap-3 mb-3">
+              <div class="pillar-icon flex-shrink-0" aria-hidden="true" style="width:40px;height:40px;">
+                <svg width="20" height="20" fill="none" stroke="#2536E6" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                  <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-heading font-semibold text-brand-900 text-base leading-tight">BEng (Hons) Software
+                  Engineering</h3>
+                <p class="text-sm text-gray-500 mt-1">Staffordshire University — UK</p>
+                <p class="text-xs text-brand-500 font-medium mt-1">2013 — 2016</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-	<!-- js -->
-	<script src="js/jquery-2.2.3.min.js"></script>
-	<!-- //js -->
+        <!-- Certifications -->
+        <div class="max-w-3xl mx-auto reveal">
+          <h3 class="font-heading font-semibold text-brand-900 text-lg mb-5 text-center">Certifications <span
+              class="text-gray-400 font-normal text-base">· 2026</span></h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <a href="https://www.coursera.org/account/accomplishments/verify/B9LAHQ73IM0H" target="_blank"
+              rel="noopener noreferrer" class="cert-card group" aria-label="View AI Agents and Agentic AI with Python & Generative AI certificate">
+              <div class="flex items-center gap-3 min-w-0">
+                <svg width="18" height="18" class="flex-shrink-0" fill="none" stroke="#2536E6" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+                <span class="text-sm text-gray-700 font-medium group-hover:text-brand-600 transition-colors">AI Agents and Agentic AI with Python &amp; Generative AI</span>
+              </div>
+              <svg width="14" height="14" class="flex-shrink-0 text-gray-400 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
 
-	<script>
-		$(window).scroll(function () {
-			if ($(window).scrollTop() >= 730) {
-				$('nav').addClass('fixed-header');
-			} else {
-				$('nav').removeClass('fixed-header');
-			}
-		});
+            <a href="https://www.coursera.org/account/accomplishments/verify/WP4PG3N1OLJ2" target="_blank"
+              rel="noopener noreferrer" class="cert-card group" aria-label="View Crash Course on Python certificate">
+              <div class="flex items-center gap-3 min-w-0">
+                <svg width="18" height="18" class="flex-shrink-0" fill="none" stroke="#2536E6" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+                <span class="text-sm text-gray-700 font-medium group-hover:text-brand-600 transition-colors">Crash Course on Python</span>
+              </div>
+              <svg width="14" height="14" class="flex-shrink-0 text-gray-400 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
 
-		/* scrollTop() >= 240
-		   Should be equal the the height of the header
-		 */
-	</script>
+            <a href="https://www.credly.com/badges/17b7c132-b0ca-4ac9-ae62-7341ebdc52b1" target="_blank"
+              rel="noopener noreferrer" class="cert-card group" aria-label="View IFS Mobile Workforce Management - Fleet & Equipment Management badge on Credly">
+              <div class="flex items-center gap-3 min-w-0">
+                <svg width="18" height="18" class="flex-shrink-0" fill="none" stroke="#2536E6" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+                <span class="text-sm text-gray-700 font-medium group-hover:text-brand-600 transition-colors">IFS Mobile Workforce Management — Fleet &amp; Equipment Management</span>
+              </div>
+              <svg width="14" height="14" class="flex-shrink-0 text-gray-400 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
 
-	<!-- PopUp-Box-JavaScript -->
-	<script src="js/jquery.chocolat.js"></script>
-	<script>
-		$(function () {
-			$('.filtr-item a').Chocolat();
-		});
-	</script>
-	<!-- //PopUp-Box-JavaScript -->
-	<!-- fliter-JavaScript -->
-	<script src="js/jquery.filterizr.js"></script>
-	<script src="js/controls.js"></script>
-	<script>
-		$(function () {
-			$('.filtr-container').filterizr();
-		});
-	</script>
-	<!-- //fliter-JavaScript -->
+            <a href="https://www.credly.com/badges/760b56d5-4795-4ca0-af9f-a643f3ee9858" target="_blank"
+              rel="noopener noreferrer" class="cert-card group" aria-label="View IFS Learning Achievement - IFS.ai Fundamentals badge on Credly">
+              <div class="flex items-center gap-3 min-w-0">
+                <svg width="18" height="18" class="flex-shrink-0" fill="none" stroke="#2536E6" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+                <span class="text-sm text-gray-700 font-medium group-hover:text-brand-600 transition-colors">IFS Learning Achievement — IFS.ai Fundamentals (IFS Cloud)</span>
+              </div>
+              <svg width="14" height="14" class="flex-shrink-0 text-gray-400 group-hover:text-brand-500 transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-	<!-- start-smooth-scrolling -->
-	<script  src="js/move-top.js"></script>
-	<script src="js/easing.js"></script>
-	<script>
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
-				event.preventDefault();
+    <!-- ==================== CONTACT CTA ==================== -->
+    <section class="cta-section grain py-20 md:py-28" id="contact" aria-labelledby="contact-heading">
+      <div class="max-w-3xl mx-auto px-5 text-center relative z-10">
+        <div class="reveal">
+          <div class="section-label justify-center" style="color:#7B8CFF;">
+            <span style="background:#7B8CFF;" class="inline-block w-8 h-0.5 rounded-sm"></span>
+            Get In Touch
+          </div>
+          <h2 class="font-heading font-bold text-white mb-4"
+            style="font-size: clamp(1.75rem, 3.5vw, 2.5rem); letter-spacing: -0.02em;" id="contact-heading">
+            Open to Senior Engineering Roles &amp; Technical Leadership Opportunities
+          </h2>
+          <p class="text-base mb-10"
+            style="color: rgba(255,255,255,0.6); line-height: 1.7; max-width: 520px; margin-left: auto; margin-right: auto;">
+            If you're looking for an experienced software engineer with deep mobile architecture expertise
+            and a track record of enterprise delivery, I'd welcome the conversation.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="mailto:mgdperera@gmail.com" class="cta-btn cta-btn-primary" id="cta-email">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              mgdperera@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/gayan-perera-4054b9a4/" class="cta-btn cta-btn-secondary"
+              id="cta-linkedin" target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              LinkedIn Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-				$('html,body').animate({
-					scrollTop: $(this.hash).offset().top
-				}, 1000);
-			});
-		});
-	</script>
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="py-8" style="background: #0A0E27;" role="contentinfo">
+    <div class="max-w-6xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm" style="color: rgba(255,255,255,0.35);">
+        &copy; 2026 Gayan Perera. All rights reserved.
+      </p>
+      <div class="flex items-center gap-6">
+        <a href="mailto:mgdperera@gmail.com" class="footer-link" aria-label="Send email">Email</a>
+        <a href="https://www.linkedin.com/in/gayan-perera-4054b9a4/" class="footer-link" target="_blank"
+          rel="noopener noreferrer" aria-label="LinkedIn profile">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
 
-	<script>
-		$(document).ready(function () {
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    // Navigation scroll effect
+    const navbar = document.getElementById('navbar');
+    let lastScroll = 0;
+    const handleNavScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY > 60) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+      lastScroll = scrollY;
+    };
+    window.addEventListener('scroll', handleNavScroll, { passive: true });
 
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen.toString());
+    });
+    // Close mobile menu on link click
+    navLinks.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
 
-			$().UItoTop({
-				easingType: 'easeOutQuart'
-			});
-
-		});
-	</script>
-	<script src="js/SmoothScroll.min.js"></script>
-
-	<script src="js/bootstrap.js"></script>
+    // Scroll reveal with IntersectionObserver
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReducedMotion) {
+      const revealElements = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      revealElements.forEach(el => revealObserver.observe(el));
+    } else {
+      // If reduced motion preferred, show everything immediately
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }
+  </script>
 </body>
 
 </html>
